@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    .aqua {
+        color: aqua;
+    }
+</style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">JQUERY HTML</h1><hr>
+
+    <p id="test">This is some <b>bold</b> text in an experiment.</p>
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show HTML</button>
+    <p>Type Here: <input type="text" id="test2" value="Anything"></p>
+    <button id="btn3">Show Value</button><hr>
+
+    <p id="test1">This is an experiment.</p>
+    <p id="test3">This is another practice.</p>
+    <p>Input Field Here: <input type="text" id="test4" value="Anything"></p>
+    <button id="btn4">Set Text</button>
+    <button id="btn5">Set HTML</button>
+    <button id="btn6">Set Value</button><hr>
+
+    <p id="test5">This is an experiment.</p>
+    <ol>
+        <li>Listed item 1</li>
+        <li>Listed item 2</li>
+        <li>Listed item 3</li>
+    </ol>
+    <button id="btn7">Append text</button>
+    <button id="btn8">Prepend text</button><hr>
+
+    <div id="div2" style="height:120px;width:320px;border:3px solid black;background-color:green;">
+        This is some text in the div.
+        <p>This is an experiment in the div.</p>
+        <p>This is another practice in the div.</p>
+    </div><br>
+    <button id="btn9">Remove div element</button><hr>
+
+    <div id="div3">
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <p>This is an experiment.</p>
+        <p>This is another practice.</p><br>
+    </div>
+    <button id="btn10">Add classes to elements</button>
+
+</body>
+<script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            alert("Text: " + $("#test").text());
+        });
+        $("#btn2").click(function(){
+            alert("HTML: " + $("#test").html());
+        });
+    });
+
+    $(document).ready(function(){
+        $("#btn3").click(function(){
+            alert("Value: " + $("#test2").val());
+        });
+    });
+
+    $(document).ready(function(){
+        $("#btn4").click(function(){
+            $("#test1").text("Hello Visitors");
+        });
+        $("#btn5").click(function(){
+            $("#test3").html("<b>How Are You?</b>");
+        });
+        $("#btn6").click(function(){
+            $("#test4").val("It's Me");
+        });
+    });
+
+    $(document).ready(function(){
+        $("#btn7").click(function(){
+            $("#test5").append(" <b>Appended text</b>.");
+        });
+
+        $("#btn8").click(function(){
+            $("#test5").prepend("<b>Prepended text</b>.");
+        });
+    });
+
+    $(document).ready(function(){
+        $("#btn9").click(function(){
+            $("#div2").remove();
+        });
+    });
+
+    $(document).ready(function(){
+        $("#btn10").click(function(){
+            $("#div3").addClass("aqua"); 
+        });
+    });
+</script>
+</html>
